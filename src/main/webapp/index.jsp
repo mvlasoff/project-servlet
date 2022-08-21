@@ -34,6 +34,10 @@
 <c:set var="CROSSES" value="<%=Sign.CROSS%>" />
 <c:set var="NOUGHTS" value="<%=Sign.NOUGHT%>" />
 
+<c:if test="${draw}">
+    <h1>IT'S A DRAW!</h1>
+    <button onclick="restart()">Restart</button>
+</c:if>
 <c:if test="${winner == CROSSES}">
     <h1>CROSSES WIN!</h1>
     <button onclick="restart()">Restart</button>

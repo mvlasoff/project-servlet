@@ -48,6 +48,9 @@ public class LogicServlet extends HttpServlet {
             if(checkWin(resp, currentSession, field)) {
                 return;
             }
+        } else {
+            //when no empty cell then draw occurred
+            currentSession.setAttribute("draw", true);
         }
 
         //get list of signs
